@@ -33,7 +33,7 @@ options(error = function() {
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
 
-PARAM$experimento <- "HT4510"
+PARAM$experimento <- "HT451"
 
 PARAM$input$dataset <- "./datasets/dataset_pequeno.csv"
 PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
@@ -138,7 +138,7 @@ EstimarGanancia_lightgbm <- function(x) {
     boost_from_average = TRUE,
     feature_pre_filter = FALSE,
     verbosity = -100,
-    max_depth = -1, # -1 significa no limitar,  por ahora lo dejo fijo
+    max_depth = 10, # -1 significa no limitar,  por ahora lo dejo fijo
     min_gain_to_split = 0.0, # por ahora, lo dejo fijo
     lambda_l1 = 0.0, # por ahora, lo dejo fijo
     lambda_l2 = 0.0, # por ahora, lo dejo fijo
